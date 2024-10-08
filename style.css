@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    background-color: gold;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+form .form_container {
+    display: flex;
+}
+
+form input:first-child {
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+    box-shadow: 2px 5px 10px gray;
+}
+
+form input[type="submit"] {
+    background-color: aquamarine;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: aqua;
+    transition: all 0.2s linear;
+    transform: translateX(-5px);
+}
+
+.tasks_container {
+    width: 50%;
+    margin: 10px auto;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
+
+.tasks_container .task {
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: gold;
+}
+
+.tasks_container .task input[type="checkbox"] {
+    width: 55px;
+    height: 55px;
+}
+
+.tasks_container .task .text {
+    padding: 10px;
+    background-color: rgb(238, 208, 132);
+    box-shadow: 2px 5px 10px gray;
+    font-size: 18px;
+    width: 100%;
+}
+
+.tasks_container .task>button {
+    font-size: 30px;
+    background-color: aliceblue;
+    border: 0;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.task .text.completed {
+    font-weight: bold;
+    text-decoration: line-through;
+    background: linear-gradient(150deg, red, aquamarine);
+    color: white;
+}
+
+.msg {
+    background-color: gold;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+@media screen and (max-width:1200px) {
+
+    form,
+    .tasks_container,
+    .msg {
+        width: 90%;
+    }
+
+    form h1 {
+        font-size: 25px;
+    }
+}
